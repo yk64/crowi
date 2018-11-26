@@ -153,7 +153,7 @@
     "lint": "eslint \"**/*.js\"",
     "test": "mocha -r test/bootstrap.js --globals chai --reporter dot test/**/*.test.js --timeout 10000",
     "build": "npm run prod:client",
-    "prod:client": "NODE_ENV=production webpack --bail --colors --display-error-details --config tools/webpack.config.js",
+    "prod:client": "webpack --bail --colors --display-error-details --config tools/webpack.config.js",
     "webpack": "webpack",
     "watch": "onchange \"**/*.js\" -e \"bin\" -e \"client/thirdparty-js\" -e \"node_modules\" -e \"public\" -f add -f change -- eslint --fix \"{{changed}}\"",
     "postinstall": "npm run build"
